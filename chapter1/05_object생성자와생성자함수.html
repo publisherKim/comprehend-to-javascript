@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object로 생성
+        var codyA = new Object();
+        codyA.living = true;
+        codyA.age = 33;
+        codyA.gender = 'male';
+        codyA.getGender = function(){return codyA.gender};
+        
+        // preview codyA = {living : true, age : 33, gender : "male"}
+        // preview codyA.getGender : 'male'
+        
+        console.log(codyA);
+        // chrome say : Object {living: true, age: 33, gender: "male"}
+        console.log(codyA.getGender());
+        // chrome say : male 
+        
+        // 생성자함수를 통한 생성
+        var Person = function(living, age, gender){
+            this.living = living;
+            this.age = age;
+            this.gender = gender;
+            this.getGender = function(){return this.gender};
+        };
+        
+        var codyB = new Person(true, 33, 'male');
+        // preview : cody = {living : true, age : 33, gender : 'male', getGender : function(){return this.gender}}
+        
+        console.log(codyB);
+        // chrome say : Person {living: true, age: 33, gender: "male"}
+        
+        console.log(codyB.getGender);    // function(){return this.gender};
+        console.log(codyB.getGender());  // male
+        
+        /*
+           
+        */
+    </script>
+</body>
+</html>

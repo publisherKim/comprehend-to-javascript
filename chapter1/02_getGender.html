@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cody = new Object();
+        
+        cody.living = true;
+        cody.age = 33;
+        cody.gender = 'male';
+        cody.getGender = function(){return cody.gender};
+        
+        // preview cody.getGender : 'male'
+        
+        console.log(cody.getGender());
+        // chrome say male
+    </script>
+</body>
+</html>

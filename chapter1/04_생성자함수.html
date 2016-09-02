@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Person = function(living, age, gender){
+            this.living = living;
+            this.age = age;
+            this.gender = gender;
+            this.getGender = function(){return this.gender};
+        };
+        
+        var cody = new Person(true, 33, 'male');
+        // preview : cody = {living : true, age : 33, gender : 'male', getGender : function(){return this.gender}}
+        
+        console.log(cody);
+        // chrome say : Person {living: true, age: 33, gender: "male"}
+        // 객체에 메서드로서 함수는 들고 있지 않다.. 물론 한번 클릭해보면 getGender는 들어있긴하나 가시적으로 preview 모습으로 getGender를 보여주진 않는다...
+        
+        console.log(cody.getGender);    // function(){return this.gender};
+        console.log(cody.getGender());  // male
+        
+        /*
+            9 line : 생성자 함수Person은 living, age, gender을 파라미터로 this.living, this.age, this.gender의 living, age, gender 라는 알수 없는 값을 가진다.
+            16 line : cody 새로 Person함수를 만들면서 (true, 33, 'male')를 값으로써 전달했다.
+            그 결과는 (19, 23, 24)line 이다.
+        */
+    </script>
+</body>
+</html>

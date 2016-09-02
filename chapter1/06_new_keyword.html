@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 생성자함수를 통한 생성
+        var Person = function(living, age, gender){
+            this.living = living;
+            this.age = age;
+            this.gender = gender;
+            this.getGender = function(){return this.gender};
+        };
+        
+        var cody = new Person(true, 33, 'male');    // new keyword 와 함께 생성자 함수를 호출하면 undefined 대신 'this'가 반환된다.
+        // preview : cody = {living : true, age : 33, gender : 'male', getGender : function(){return this.gender}}
+        console.log(cody);
+        // chrome say : Person {living: true, age: 33, gender: "male"}
+        
+        var cody2 = Person(true, 33, 'male');
+        console.log(cody2); // undefined paramer를 찾을수 없다 즉 living, age, gender는 어디로 갔냐 ?
+        
+        // cody는 Person()의 객체이자 인스턴스다.
+        console.log(typeof cody);           // object
+        console.log(cody);                  // cody가 포함된 속성과 값이 기록
+        console.log(cody.constructor);      // Person() 함수가 기록!! 생성자!!!
+        
+        /*
+            this와의 연결고리 new 라는 것을 알수 있다. 
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myString = new String('foo');
+        console.log(myString);      // foo = {0 : 'f', 1 : 'o', 2 : 'o'}
+        
+        /*
+            var string = 'foo';
+            이 방식을 쓰지 말라기 보다는 무슨 일이 일어나느지는 이해하고 있어야 된다고 한다.
+            즉 객체의 인스턴스를 얻을수 있느냐 없느냐는 중요한 이해라는 점!!
+        */
+        
+        // 자바스크립트 객체의 인스턴스를 만드는 코드. 객체로 저장해서 쓸수 있느냐 없느냐
+        var myNumber = new Number(23);
+        var myString = new String('male');
+        var myBoolean = new Boolean(false);
+        var myObject = new Object();
+        var myArray = new Array('foo', 'bar');
+        var myFunction = new Function('x', 'y', 'return x*y');
+        var myDate = new Date();
+        var myRegExp = new RegExp('\bt[a-z]+\b');   // 일단 정규식은 패스하자 몰라 임마
+        var myError = new Error('Crap!');       // 이것도 pass
+        
+        // 만들어진 객체(instance)의 생성자가 무엇인지 기록 및 확인
+        console.log(myNumber.constructor);      // Number()
+        console.log(myString.constructor);      // String()          
+        console.log(myBoolean.constructor);     // Boolean()         
+        console.log(myObject.constructor);      // Object()
+        console.log(myArray.constructor);       // Array()
+        console.log(myFunction.constructor);    // Function()
+        console.log(myDate.constructor);        // Date()
+        console.log(myRegExp.constructor);      // RegExp()
+        console.log(myError.constructor);       // Error()
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Person = function(living, age, gender){
+            this.living = living;
+            this.age = age;
+            this.gender = gender;
+            this.getGender = function(){return this.gender};
+        };
+        
+        var cody = new Person(true, 33, 'male'); 
+        console.log(cody);
+        
+        var lisa = new Person(true, 34, 'female');
+        console.log(lisa);
+        
+        /*
+            여러개의 고유한 사람 객체를 간단하게 만들수 있다.
+            Person() 생성자는, Array() 생성자와 사실상 같은규칙이다.
+            Array('foo', 'bar') 사실 new Person(true, 33, 'male')과
+            크게 다르지 않다!!! 사실상 같은 패턴 그냥 10~13line 16line이 추가되었을뿐...
+            
+            var k = {};
+            k.foo = {living:true, age:33, gender:'male'};
+
+            console.log(k);
+            console.log(k.foo);
+            
+            사실상 위코드와 결과는 동일하다는 것이다. 복합객체의 의미
+            서론 본론 결론으로 가지는 문장이 다르고 이에따른 활용이 다른거지
+            물론 Person 생성자 함수를 활용해서 작성하는 방법이 향후를 생각하면
+            더 좋을것이라는것을 예측할수 있다.
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myArray = new Array();
+        // preview : 배열 ?
+        
+        console.log(typeof myArray);
+        // object 잉 ? 왜 ???
+        console.log(myArray);
+        // []... 어라 배열 ...
+        console.log(myArray.constructor);
+        // Array()... 헐!!
+        
+        /*
+            결과는 복합 객체이고(typeof),
+            myArray는 배열,
+            생성자는 Array()임을 알수 있다.
+            즉 객체는 배열을 포함하고 있다. 타입을 물어보면 객체라고 출력한다.
+            
+            tip: 자바스크립트에서 대부분의 값(원시값은 제외) 생성자 함수를 사용해 객체를 만들거나 
+            인스턴스화 할수 있다. 이말은 myArray는 생성자의 객체이며 인스턴스다. 껍데기이면서 사실 인스턴스란 말은 관념적으로 보면 인스턴트 식품과 같지 않나 싶다.
+            참고 http://cooablue.tistory.com/entry/%EA%B0%9D%EC%B2%B4Object%EC%99%80-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4Instance
+        */
+    </script>
+</body>
+</html>

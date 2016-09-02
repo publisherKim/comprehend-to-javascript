@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myObject = new Object();
+        myObject['0'] = 'f';
+        myObject['1'] = 'o';
+        myObject['2'] = '0';
+        
+        // preview : myObject = {0 : 'f', 1 : 'o', 2 : 'o'}
+        console.log(myObject);
+        // chrome say : object = {0 : 'f', 1 : 'o', 2 : 'o'}
+        
+        var myString = new String('foo');
+        // preview : myString = {I don't know...}
+        
+        console.log(myString);
+        // 사실은 자바스크립트 엔진이 결과를 크롬브라우저를 통해 출력해주는것.
+        // chrome say : String {0: "f", 1: "o", 2: "o", length: 3, [[PrimitiveValue]]: "foo"}
+        
+        // 단 한줄의 스티링 작업에 어떠한 작업을 했는지 예측이 가능하다. length:3 [[]]:'foo' 도 추가해줬다. 엄밀히 따지면 객체에 속성 값을 넣어준것보다 추가 작업을 2개나 더 했음도 알수 있다.
+        // console.log(myString[[PrimitiveValue]]); 이걸로 foo라는 값을 호출할수 있을거라 생각했으나 not defined 아직은 알수 없다. 
+        
+        // vlueOf 함수와 PrimitiveValue 와 연관이 있지 않나 싶다. 아마도 valueOf()함수를 메서드로서 호출하면 [[PrimitiveValue]] : 'foo' 가 호출 되어지는걸로 추정
+        // 정확한걸 알고 싶다면 spec 이나 api 구글링들을 통해서 더 알아야 할듯...
+        console.log(myString.valueOf());
+    </script>
+</body>
+</html>
