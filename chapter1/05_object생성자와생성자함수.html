@@ -39,7 +39,14 @@
         console.log(codyB.getGender());  // male
         
         /*
-           
+            위아래 두 코드는 동일한 cody 객체가 만들어지지만 Person 생성자 함수의 경우
+            Object()생성자가 아닌 사용자가 정의한 Person() 생성자와 new 연산자를 사용한
+            인스턴스로 만들었다.
+            
+            codyA와 codyB 객체는 자체로보면 차이가 없으나, 객체를 만든 생섬자 함수는 다르다.
+            여기서 Preson() 다른 Person() 객체를 만들때로 사용 !!! 붕어빵틀이 된다.
+            
+            즉 객체를(codyA와 codyB) 어떻게 만들던 상관없이 최종 결과로는 결국 복합 객체가 만들어졌다. 
         */
     </script>
 </body>
