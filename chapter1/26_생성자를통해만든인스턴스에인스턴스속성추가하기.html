@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myArray = new Array();
+        myArray.prop = 'test';
+        
+        console.log(myArray.prop);
+        // test
+        
+        /*
+            원시자료형을 제외한 Object(), RegExp()등 모든 네이티브 생성자에도 동일하게 적용 된다. 
+            복합 객체에 속성 값이 추가가 가능하단 뜻.
+        */
+        
+        // 예외상황만 살펴보자.
+        
+        var myString = 'string';
+        var myNumber = 1;
+        var myBoolean = true;
+        
+        myString.prop = true;
+        myNumber.prop = true;
+        myBoolean.prop = true;
+        
+        console.log(myString.prop, myNumber.prop, myBoolean.prop);
+        
+        /*
+            var myString = new String ();
+            
+            myString.prop = 'test';
+            
+            복합객체에선 속성 값이 추가 됨을 이해할수 있다.
+            
+            tip :  인스턴스는 자신만의 고유한 속성은 물론 프로토타입 체인에서 상속받은 속성도 포함할수 있으며, 앞으 코드에서 보았듯이
+            인스턴스로 만든 후에도 속성을 추가할 수도 있다. 자바스크립트 객체의 동적 특성을 여실히 보여주는 부분이다. 
+            하나의 부품을 만든 뒤에도 또 다른 연결이 가능하다. 
+            예를 들어서 팔뚝을 만든후, 엄지 손가락, 검지손가락, 중지손가락... 이어 붙일수가 있다.
+        */
+    </script>
+</body>
+</html>

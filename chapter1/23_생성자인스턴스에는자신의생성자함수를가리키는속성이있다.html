@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var foo = {};
+        
+        console.log(foo.constructor === Object);
+        console.log(foo.constructor);
+        
+        /*
+            1. foo의 생성자 Object();  <--- 이므로 true
+            2. foo의 생성자는 Object();
+            
+            tip : constructor를 활용하면 .prototpye(생성자함수)이 뭔지 알수 있다.
+            간편하게 생성자 함수를 찾을수 있다. 
+            어떤 인스턴스가(foo)가 배열인지 객체인지 혹은 다른 자료형인지 확인 가능.
+        */
+        
+        var myNumber = new Number('23');
+        var myNumberL = 23;
+        var myString = new String('male');
+        var myStringL = 'male';
+        var myBoolean = new Boolean('true');
+        var myBooleanL = true;
+        var myObject = new Object();
+        var myObjectL = {};
+        var myArray = new Array();
+        var myArrayL = [];
+        var myFuntion = new Function();
+        var myFunctionL = function(){};
+        var myDate= new Date();
+        var myRegExp = new RegExp('/./');
+        var myRegExpL = /./;
+        var myError = new Error();
+        
+        console.log(
+            myNumber.constructor,
+            myNumberL.constructor,
+            myString.constructor,
+            myStringL.constructor,
+            myBoolean.constructor,
+            myBooleanL.constructor,
+            myObject.constructor,
+            myObjectL.constructor,
+            myArray.constructor,
+            myArrayL.constructor,
+            myFuntion.constructor,
+            myFunctionL.constructor,
+            myDate.constructor,
+            myRegExp.constructor,
+            myRegExpL.constructor,
+            myError.constructor     
+        );
+    </script>
+</body>
+</html>

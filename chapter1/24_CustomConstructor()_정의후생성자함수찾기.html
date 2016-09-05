@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var CustomConstructor = function CustomConstructor(){return '생성자함수 만들었징'};
+        var instanceOfCustomObject = new CustomConstructor();
+        
+        console.log(instanceOfCustomObject.constructor === CustomConstructor);
+        console.log(instanceOfCustomObject.constructor);
+        
+        /*
+            var a = function (){return 1;}  <--- 생성자 함수
+            var instance = new a();
+            이게 끝
+            
+            tip : return string 원시값 형태를 호출할때도 생성자 함수를 가리키는 속성인 constructor를 가지고 있다. 자바스크립트엔진이
+            이런한 동작을 하는구나 정도로 이해하자.
+            
+            constructor 속성을 통해 사용자정의 생성자 함수의 실제이름을 알고 싶다면 생성자 함수를 만들때 함수표현식에 이름을 포함 해야 된다. 
+            var a = function NAME(){}   NAME를 주목하자.
+        */
+    </script>
+</body>
+</html>

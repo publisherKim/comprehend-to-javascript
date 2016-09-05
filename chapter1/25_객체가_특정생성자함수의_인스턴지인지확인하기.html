@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var CustomConstructor = function(){this.foo = 'bar';};
+        
+        var instanceOfCustomObject = new CustomConstructor();
+        
+        console.log(instanceOfCustomObject instanceof CustomConstructor);
+        
+        console.log(new Array('foo') instanceof Array);
+        
+        /*
+            1. true
+            2. 네이티브 객체에도 똑같이 적용된다. 
+            var a = new Array('foo'); 하지 않아서 메모리상에 남진 않겠지만 2번 역시 true를 찍힌다. 
+            윈도우에 들고 있을라나 ? 생성된 배열을 기록하는진 모르겠다.
+            
+            tip : 자바스크립트의 모든 객체는 Object()를 상속하므로 Object()의 인스턴트인지 물으면 ALL true
+            원시값이 해당하는 객체 레퍼런스에 대해선 false ex) 'foo' instanceof String : false
+            그러나 new String('foo') instanceof String : true
+            그러므로 복합객체에서만 instanceof를 사용해야 한다.
+        */
+    </script>
+</body>
+</html>

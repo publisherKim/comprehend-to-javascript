@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // augmentedProperties 속성을 추가해 내장 String 생서자 함수를 확장하기
+        String.augmentedProperties = [];  
+        
+        if(!String.prototype.trimIT){   // potototype에 trimIT가 없다면
+            // trimIT 라는 x+y
+            String.prototype.trimIT = function(x, y){
+                this.x = x;
+                this.y = y;
+                return this.x + this.y;
+            }
+            //trimIT라는 문자여을 추가
+            String.augmentedProperties.push('trimIT');
+        }
+        
+        var myString = 'trim me';
+        console.log(myString.trimIT(1,2));  //3
+        console.log(String.augmentedProperties.join());
+        //trimIT가 기록되어 있음을 알수 있다.
+        
+        /*
+            사실 네이티브객체에 생성자 함수를 추가하는건 개인의 판단에 맡긴다고 한다.
+            이건 개인의 판단 프로젝트마다 필요시 추가해도 되고 안해도 그만... 단 문서화 하지 않으면 저게 뭔지 알길이 없음...
+            
+            tip : 자바스크립트 네이티브 객체나 함수를 수정하면 자신만의 자바스크립트가 탄생한다. 독일지 약일지는 알수 없다.
+        */
+    </script>
+</body>
+</html>
