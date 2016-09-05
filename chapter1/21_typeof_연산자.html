@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 원시값
+        var myNull = null;
+        var myUndefined = undefined;
+        var primitiveString1 = 'string';
+        var primitiveString2 = String('string');
+        var primitiveNumber1 = 10;
+        var primitiveNumber2 = Number(10);
+        var primitiveBoolean1 = true;
+        var primitiveBoolean2 = Boolean('true');
+        
+        console.log(typeof myNull);                 // object ??
+        console.log(typeof myUndefined);            // undefined
+        console.log(typeof primitiveString1);       // string
+        console.log(typeof primitiveString2);       // string
+        console.log(typeof primitiveNumber1);       // number
+        console.log(typeof primitiveNumber2);       // number
+        console.log(typeof primitiveBoolean1);      // boolean
+        console.log(typeof primitiveBoolean2);      // boolean
+        
+        // 복합객체
+        var myNumber = new Number(22);
+        var myString = new String('male');
+        var myBoolean = new Boolean(false);
+        var myObject = new Object();
+        var myArray = new Array('foo', 'bar');
+        var myFunction = new Function('x','y','return x*y');
+        var myDate = new Date();
+        var myRegExp = new RegExp('\\bt[a-z]+\\b');
+        var myError = new Error('Crap!');
+        
+        console.log(typeof myNumber);                   // object
+        console.log(typeof myString);                   // object
+        console.log(typeof myBoolean);                  // object
+        console.log(typeof myObject);                   // object
+        console.log(typeof myArray);                    // object
+        console.log(typeof myFunction);                 // function ??
+        console.log(typeof myDate);                     // object
+        console.log(typeof myRegExp);                   // object ??
+        console.log(typeof myError);                    // object
+        
+        /*
+            typeof 연산자의 경우 반환되는 문자열의 경우 논리적이거나 정확하다고 보기 어려운 점을 참고..
+            1.의 경우 당연히 null(원시값) 이여야 하는 object를 반환함
+            
+            복합객체 함수의 경우에도 함수라고 뱉음 ???
+            정규식은 object ???
+        */
+    </script>
+</body>
+</html>

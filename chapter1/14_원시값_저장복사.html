@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myString = 'string';
+        var myString2 = String('string');
+        var myNumber = 10;
+        var myNumber2 = Number(10);
+        var myBoolean = true;
+        var myBoolean2 = Boolean(true);
+            
+        
+        console.log(typeof myString, typeof myString2, typeof myNumber, typeof myNumber2, typeof myBoolean, typeof myBoolean2);
+        // string, string, number, number, boolean, boolean
+        
+        var myStringNew = new String('complexObject');
+        var myNumberNew = new Number(10);
+        var myBooleanNew = new Boolean(false);
+        
+        console.log(typeof myStringNew, typeof myNumberNew, typeof myBooleanNew);
+        //object, object, object
+        
+        /*
+            literal 문법 및 생성자 함수로 3개의 원시값을 변수에 할당해도 
+            문자, 숫자 불린임을 알수 있다. 
+            
+            그러나 new 연산자를 통해서 했을땐 복합객체임을 알아야 한다.
+        */
+    </script>
+</body>
+</html>

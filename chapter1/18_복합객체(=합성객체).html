@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myObject = {};
+        
+        var copyOfMyObject = myObject;  //값이 아닌 참조(reference)만 복사
+        // copyOfMyobject = {}
+        
+        myObject.foo = 'bar'
+        
+        // preview : copyofmyObject 는 무엇일까 ?
+        
+        console.log(myObject, copyOfMyObject);
+        // chromeSay : Object {foo: "bar"}, foo: "bar"__proto__: Object, Object {foo: "bar"}
+        
+        /*
+            foo: "bar"__proto__: Object <--- 이녀석에 주목
+            __proto__ 참조객체를 공유하고 있음을 알수 있다.
+            메로리 저장공간에 있는 객체의 주소를 공유할 뿐이다. 
+            바라보는 공간이 같다는 뜻.
+            그래서 우리는 램이라는 하드웨어 메모리가 어떻게 생겼는지 하드웨어도 공부할 필요가 있다.
+            
+            tip : 둘중 한변수의 값만 바꾸더라도 두 변수의 값이 모두 변했다. 
+            숫자, 문자, 불린의 경우 뉴 연산자로 복합객체를 생성해도 값이 그대로 저장 복사된다. 따라서 원시값을 복합객체처럼 
+            다룰수 있어도 참조가 복사되지는 않는다. 16장에서 말한 원시값을 객체처럼 사용할수 있으나 원시값으로 되돌려 논단 원리 일듯
+            궁금하면 더 찾아봐야 할듯.
+            
+            정말로 객체의 복사본을 만들고 싶다면 복사할 객체에서 값을 추출한 후 새 객체에 추가 해야 된다. 
+            a = {basic : 1} 이라는 값을 b : {basic : 1} 이라는 상태로 만들기 위해서는 서로 같은 참조를 공유할게 아니라 
+            b.basic = 1 <--- 이런식으로 삽입을 해야 한단 뜻 좀더 풀어쓰면...
+            c = a.basic
+            b.basic = c; <--- 이런 식의 작성법.
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var object = {
+            myString : 'string',
+            myNumber : 10,
+            myBoolean : false,
+            myNull : null,
+            myUndefined : undefined
+        };
+        
+        var array = ['string', 10, false, null, undefined];
+        
+        /*
+            object, array 기본 값들이 복합적으로 다 들어가 있음을 알수 있다. 
+            숫자, 문자, 불린, 널, 언디파인드 등... 더 덜어가면 객체의 경우 함수도 들어감을 예측할수 있다.
+            tip : 복합객체 = 합성객체 = 참조 자료형 같은말임을 알아두자.
+            원시값은 '값으로 참조' 되지 않으니 여러 값으로 구성된 합성체를 표현할 수 없으나, 복합 객체는 '값으로 참조'되며,
+            다른 값을 포함하거나 캡슐화할 수 있다.(ex : 알약 껍데기를 까면, 가루안에는 여러가지 약종류가 썩여있다.)
+        */
+        
+        var myString = 'string';
+        var myNumber = 10;
+        var myBoolean = false;
+        var myNull = null;
+        var myUndefinde = undefined;
+        
+        // 원시값은 하나 밖에 들어갈수 없다 뭐가 되었든 그러나 복합 객체는 여러 형태의 값을 구성할 수 있음 알수 있다.
+        console.log(object === myString, array === myString);
+        
+        
+    </script>
+</body>
+</html>

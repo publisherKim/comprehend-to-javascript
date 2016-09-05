@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var objA = {property : 'value'};
+        var pointer1 = objA;
+        var pointer2 = pointer1;
+        
+        objA.property = null;
+        
+        console.log(objA.property, pointer1.property, pointer2.property);
+        // null, null, null
+        
+        /*
+            동적인 객체 속성이 가능해진다. 
+            즉 하나를 바꾸면 나머지도 다 바꿀수 있다. 
+            이 원리를 잘 적용하면 동적 개발이 가능해진단 뜻.
+        */
+    </script>
+</body>
+</html>

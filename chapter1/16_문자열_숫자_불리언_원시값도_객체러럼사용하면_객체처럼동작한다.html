@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myNull = null;
+        var myUndefined = undefined;
+        var primitiveString1 = 'foo';
+        var PrimitiveString2 = String('foo');   // not new 원시값을 가짐.
+        var primitiveNumber1 = 10;
+        var primitiveNumber2 = Number('10');   // not new 원시값을 가짐.
+        var primitiveBoolean1 = true;
+        var primitiveBoolean2 = Boolean('true');    // not new 원시값을 가짐.
+        
+        // 원시값을 객체처럼 다루면 값이 객체로 변환된다는 것을 보여주기 위해 toString()을 통해 접근
+        
+        console.log(primitiveString1.toString(), PrimitiveString2.toString());
+        console.log(primitiveNumber1.toString(), primitiveNumber2.toString());
+        console.log(primitiveBoolean1.toString(), primitiveBoolean2.toString());
+        
+        /*
+            원시값을 마치 생성자 함수를 통해 만들어진 객체를 다루듯이 쓰면(.toString() 연결해서 썻따.메서드 체인 방식등)
+            자스는 원시값을 객체로 바꾸어 코드를 실행 후 객체를 버리고 다시 원시 값으로 되돌려 놓는다.
+            
+            이말은 원래 값은 객체처럼쓸수 없는데 자스는 이걸 해결하기 위해서 엔진이 원시값조차도 객체처럼(메서드체인이 가능하게) 쓰고,
+            다시 값을 원시값으로 돌려놓는단 뜻으로 추정
+            like tha 10 + a = 10a 가되듯이 임으로 해석하고 계산한단 말. 숫자를 문자열 변환을 지가 하듯이 원시 값도 객체로 돌리고 
+            다시 원시값으로 돌려 논단 말.
+            
+            단 null과 undefined는 에러를 뱉는다.
+        */
+    </script>
+</body>
+</html>
